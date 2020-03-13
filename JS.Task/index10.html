@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS.6</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+  First element: <input class="num" value="" type="text"  placeholder="0">
+  <br>
+  Second element:<input class="num" value=""  type="text" placeholder="0">
+  <br>
+  Third element: <input class="num" value="" type="text" placeholder="0">
+  <br>
+  <button id="task" > Sum </button>
+  <br>
+  Result = <input id="sum" value="" type="text" placeholder="0">
+<body>
+ <script>
+  var el = document.getElementById('task');
+  el.addEventListener('click',func);
+
+  var el1= document.getElementsByClassName('num');
+
+var sum = 0;
+  function func(){
+    for (i=0; i<el1.length; i++){
+      sum += +el1[i].value;
+    }
+var newArr = document.getElementById('sum');
+newArr.value = sum;
+  }
+</script>
+</body>
+</html>
